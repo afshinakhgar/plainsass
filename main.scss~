@@ -1,0 +1,12 @@
+$default_Color : red;
+body{
+	background-color:$default_Color;
+	header{
+
+		border:1px solid black;
+		direction:rtl;
+
+	}
+}
+
+
