@@ -1,0 +1,10 @@
+@import "../init";
+header.bar{
+	@include outer-container(100%);
+	// position:absolute;
+	height:40px;
+	background-color: $primary-color-dark;
+	background-image: -webkit-linear-gradient(bottom, $primary-color-dark, $primary-color-light);
+	background-image:         linear-gradient(to top, $primary-color-dark, $primary-color-light);
+	
+}

@@ -9,7 +9,29 @@
 		}
 	}
 }
-.clearfix{
-   @include row();
+%clearfix {
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+}
+%reset{
+	margin:0;
+	padding:0;
+}
+%listreset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul,p,body {
+    @extend %listreset;
+}
+.block {
+    @extend %clearfix;
+}
+ul {
+    @extend %listreset;
 }
 
