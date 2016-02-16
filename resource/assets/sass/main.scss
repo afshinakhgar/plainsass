@@ -13,6 +13,15 @@
 
 
 @import "vendor/neat/app/assets/stylesheets/neat";
+@import "vendor/bitters/app/assets/stylesheets/base";
 
 
+@import "mixins";
 @import "grid";
+@import "breackpoints";
+
+
+.wrapper{
+	background-color:#b6b6b6;
+	@include pad(30px);
+}

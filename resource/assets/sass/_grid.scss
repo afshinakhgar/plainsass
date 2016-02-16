@@ -1,6 +1,15 @@
-.row{
-  @include outer-container;
-  .col-6{
-    @include span-columns(6);
-  }
+.wrapper{
+	@include outer-container(960px);
+	.row{
+		@include outer-container;
+		@for $i from 1 through 12 {
+		    .col-#{$i} {
+	           @include span-columns($i);
+		    }
+		}
+	}
 }
+.clearfix{
+   @include row();
+}
+

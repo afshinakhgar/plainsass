@@ -1,0 +1,38 @@
+@mixin gridCol($gridNumber) {
+  .col-$gridNumber{
+    @include span-columns($gridNumber);
+  }
+
+}
+
+/* BEM MIXINS */
+@mixin new($block) {
+  @at-root .#{$block} {
+    @content;
+  }
+}
+
+@mixin has($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin when($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+/* Other BEM SAME AS HUMAN BEM */
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}

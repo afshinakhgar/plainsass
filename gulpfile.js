@@ -26,6 +26,8 @@ gulp.task('sass',function(cb){
     cb();
 });
 
+
+
 /*Minify and sourcemap For css Compiled by sass*/
 gulp.task('minify-css',['sass'], function() {
 	setTimeout(
