@@ -18,11 +18,7 @@ var sassOptions = {
 
 // Sass Compile 
 gulp.task('sass',function(cb){
-	gulp.src(resourceSrc+'**/*.scss')
-	.pipe(autoprefixer({
-		browsers: ['last 2 versions'],
-		cascade: false
-	}))
+	gulp.src(resourceSrc+'sass/**/*.scss')
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(concat('app.css'))
 	.pipe(gulp.dest(output+'css/src'))
@@ -37,7 +33,6 @@ gulp.task('minify-css',['sass'], function() {
 			return gulp.src(output+'css/src/*.css')
 		    .pipe(sourcemaps.init())
 		    .pipe(minifyCss({compatibility: 'ie8'}))
-		    .pipe(autoprefixer())
 		    .pipe(concat('app.css'))
 		    .pipe(sourcemaps.write('.'))
 		    .pipe(gulp.dest(output+'css/run'));

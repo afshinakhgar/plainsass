@@ -1,0 +1,6 @@
+.row{
+  @include outer-container;
+  .col-6{
+    @include span-columns(6);
+  }
+}

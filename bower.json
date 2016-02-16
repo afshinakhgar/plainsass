@@ -23,6 +23,7 @@
     "jquery": "^2.2.0",
     "bourbon": "^4.2.6",
     "neat": "^1.7.2",
-    "bitters": "^1.2.0"
+    "bitters": "^1.2.0",
+    "compass-breakpoint": "^2.6.1"
   }
 }
