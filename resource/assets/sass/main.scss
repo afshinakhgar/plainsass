@@ -19,9 +19,10 @@
 @import "mixins";
 @import "grid";
 @import "breackpoints";
+@import "palette";
 
 
 .wrapper{
-	background-color:#b6b6b6;
+	background-color:$primary-color-light;
 	@include pad(30px);
 }
