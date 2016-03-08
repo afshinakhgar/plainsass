@@ -24,6 +24,7 @@
     "bourbon": "^4.2.6",
     "neat": "^1.7.2",
     "bitters": "^1.2.0",
-    "compass-breakpoint": "^2.6.1"
+    "compass-breakpoint": "^2.6.1",
+    "pagePiling.js": "pagepiling.js#^1.5.3"
   }
 }

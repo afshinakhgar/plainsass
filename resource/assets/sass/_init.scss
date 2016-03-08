@@ -12,7 +12,7 @@
 // $mobile: new-breakpoint(max-width 480px 3);
 
 @import "vendor/neat/app/assets/stylesheets/neat";
-@import "vendor/bitters/app/assets/stylesheets/base";
+@import "vendor/bitters/core/base";
 
 @import "mixins";
 @import "grid";

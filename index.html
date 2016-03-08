@@ -1,34 +1,82 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="public/assets/css/src/app.css">
+		<meta charset="utf-8">
+		<title>Akhgar.net | Afshin Akhgar's Media</title>
+		<link rel="stylesheet" type="text/css" href="vendor/pagePiling.js/jquery.pagepiling.css" />
+		<script src="vendor/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="vendor/pagePiling.js/jquery.pagepiling.min.js"></script>
+
+
+		<style>
+			/* Centered texts in each section
+			* --------------------------------------- */
+			.section{
+				text-align:center;
+			}
+
+
+			/* Backgrounds will cover all the section
+			* --------------------------------------- */
+			#section1,
+			#section2,
+			#section3{
+				background-size: cover;
+			}
+
+			/* Defining each section background and styles
+			* --------------------------------------- */
+			#section1{
+				background-image: url(public/images/bg1.jpg);
+			}
+			#section2{
+				background-image: url(public/images/bg2.jpg);
+				padding: 6% 0 0 0;
+			}
+			#section3{
+				background-image: url(public/images/bg3.jpg);
+				padding: 6% 0 0 0;
+			}
+		</style>
+		<script>
+			$(document).ready(function() {
+			    $('#pagepiling').pagepiling({
+			        menu: null,
+			        direction: 'vertical',
+			        verticalCentered: true,
+			        sectionsColor: [],
+			        anchors: [],
+			        scrollingSpeed: 700,
+			        easing: 'swing',
+			        loopBottom: false,
+			        loopTop: false,
+			        css3: true,
+			        navigation: {
+			            'textColor': '#000',
+			            'bulletsColor': '#000',
+			            'position': 'right',
+			            'tooltips': ['section1', 'section2', 'section3', 'section4']
+			        },
+			        normalScrollElements: null,
+			        normalScrollElementTouchThreshold: 5,
+			        touchSensitivity: 5,
+			        keyboardScrolling: true,
+			        sectionSelector: '.section',
+			        animateAnchor: false,
+
+			        //events
+			        onLeave: function(index, nextIndex, direction){},
+			        afterLoad: function(anchorLink, index){},
+			        afterRender: function(){},
+			    });
+			});
+		</script>
 	</head>
-
-
 	<body>
-		<header class="bar">
-			<div class="row">
-				<div class="col-12">
-					afshin
-				</div>
-			</div>
-		</header>
-		<div class="wrapper clearfix">
-			
-
-			<div class="row">
-				<div class="col-11" style="">afsasdas</div>
-				<div class="col-1">sad asd asd </div>
-			</div>
-
-			<form action="">
-				<select name="sadsa" id="">
-					<option value="">afsad>afsad>afsad</option>
-					<option value="">afsad>afsad>afsad</option>
-				</select>
-				<input type="text">
-			</form>
+		<div id="pagepiling">
+		    <div class="section" id="section1" >Some section</div>
+		    <div class="section" id="section2" >Some section</div>
+		    <div class="section" id="section3" >Some section</div>
+		    <div class="section">Some section</div>
 		</div>
-
-
 	</body>
 </html>
